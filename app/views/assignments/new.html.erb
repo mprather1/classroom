@@ -1,0 +1,5 @@
+<h2>New Assignment</h2>
+<%= form_for @assignment do |f| %>
+  <%= render partial: 'form', locals: {f: f} %>
+  <%= f.submit('Create Assignment', class: 'btn btn-inverse') %>
+<% end %>
