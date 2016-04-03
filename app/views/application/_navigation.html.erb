@@ -2,5 +2,7 @@
   <li><%= link_to 'Users', users_path %></li>
   <% if logged_in? %>
     <li><%= link_to 'Assignments', user_assignments_path(current_user) %></li>
+    <li><%= link_to 'Classes', user_classrooms_path(current_user) %></li>
+
   <% end %>
 </nav>

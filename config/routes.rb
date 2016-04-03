@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   resources :users do
     resources :assignments
+    resources :classrooms
   end
 
   resources :assignments
-
+  resources :classrooms
+  
   get 'access/login' => 'access#login'
   get 'access/attempt_login' => 'access#attempt_login'
   post 'access/attempt_login' => 'access#attempt_login'

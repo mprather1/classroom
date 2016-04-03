@@ -18,3 +18,7 @@ end
 50.times do |x|
   Assignment.create(title: Faker::Book.title, content: Faker::Lorem.paragraph(3, true, 5), user_id: Faker::Number.between(1, 10))
 end
+
+7.times do |x|
+  Classroom.create(title: "#{Faker::Name.prefix} #{Faker::Name.last_name.possessive} Class")
+end
