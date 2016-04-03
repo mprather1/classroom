@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20160403050448) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "username"
+    t.string   "email"
     t.string   "password_digest"
     t.boolean  "admin",           default: false
     t.datetime "created_at",                      null: false
