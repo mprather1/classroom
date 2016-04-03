@@ -1,7 +1,9 @@
 class AssignmentsController < ApplicationController
 
+  before_action :find_user
+
   def index
-    @assignments = Assignment.all
+  #  @assignments = Assignment.all
   end
 
   def show
@@ -52,4 +54,11 @@ class AssignmentsController < ApplicationController
     params.require(:assignment).permit(:title, :content, :user_id)
   end
 
+  def find_user
+    if params[:user_id]
+      @assignments = Assignment.where(user_id: params[:user_id])
+    else
+      @assignments = Assignment.all
+    end
+  end
 end
