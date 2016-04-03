@@ -16,5 +16,5 @@ User.create(first_name: "admin", last_name: "admin", username: "admin", email: "
 end
 
 50.times do |x|
-  Assignment.create(title: Faker::Book.title, content: Faker::Lorem.paragraph(3, true, 5))
+  Assignment.create(title: Faker::Book.title, content: Faker::Lorem.paragraph(3, true, 5), user_id: Faker::Number.between(1, 50))
 end

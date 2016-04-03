@@ -1,1 +1,11 @@
 <h2><%= user.name %></h2>
+<table>
+  <% user.assignments.each do |assignment| %>
+    <tr>
+      <th>
+        <%= link_to assignment.title, assignment_path(assignment) %>
+      </th>
+
+    </tr>
+    <% end %>
+</table>
