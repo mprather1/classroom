@@ -1,5 +1,4 @@
 class Assignment < ActiveRecord::Base
-
-  belongs_to :user
-  
+  belongs_to :classroom
+  belongs_to :users
 end

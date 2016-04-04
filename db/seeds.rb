@@ -16,9 +16,21 @@ User.create(first_name: "admin", last_name: "admin", username: "admin", email: "
 end
 
 50.times do |x|
-  Assignment.create(title: Faker::Book.title, content: Faker::Lorem.paragraph(3, true, 5), user_id: Faker::Number.between(1, 10))
+  Assignment.create(title: Faker::Book.title, content: Faker::Lorem.paragraph(3, true, 5), user_id: Faker::Number.between(1, 10), classroom_id: Faker::Number.between(1, 7))
 end
 
+#7.times do |x|
+#  Classroom.create(title: "#{Faker::Name.prefix} #{Faker::Name.last_name.possessive} Class",
+#   user_ids:
+#    "#{7.times do |x|
+#     [Faker::Number.between(1, 10)]
+#   end}",
+#   assignment_ids:
+#   "#{7.times do |x|
+#     [Faker::Number.between(1, 10)]
+#   end}")
 7.times do |x|
   Classroom.create(title: "#{Faker::Name.prefix} #{Faker::Name.last_name.possessive} Class")
+   #user_id: Faker::Number.between(1, 10), assignment_id: Faker::Number.between(1, 10))
+
 end

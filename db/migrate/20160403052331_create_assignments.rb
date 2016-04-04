@@ -3,6 +3,8 @@ class CreateAssignments < ActiveRecord::Migration
     create_table :assignments do |t|
       t.string :title
       t.text :content
+      t.integer :user_id
+      t.integer :classroom_id
 
       t.timestamps null: false
     end
