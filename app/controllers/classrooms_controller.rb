@@ -7,7 +7,6 @@ class ClassroomsController < ApplicationController
 
   def show
     @classroom = Classroom.find(params[:id])
-    @user = User.find(current_user.id)
   end
 
   def new
@@ -51,7 +50,7 @@ class ClassroomsController < ApplicationController
   private
 
   def classroom_params
-    params.require(:classroom).permit(:title)
+    params.require(:classroom).permit(:title, :teacher)
   end
 
 

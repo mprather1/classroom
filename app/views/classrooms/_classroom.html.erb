@@ -1,6 +1,6 @@
 <h2><%= classroom.title %></h2>
 <p>
-  <% @user.classrooms.each do |classroom| %>
-  <%= classroom.title %>
+  <% classroom.users.each do |user| %>
+  <%= user.name %>
   <% end %>
 </p>

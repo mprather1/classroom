@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :assignments
-  has_and_belongs_to_many :classrooms
+  belongs_to :classroom
 
   has_secure_password
 

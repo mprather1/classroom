@@ -4,7 +4,7 @@ class CreateAssignments < ActiveRecord::Migration
       t.string :title
       t.text :content
       t.integer :user_id
-      t.integer :classroom_id
+    
 
       t.timestamps null: false
     end

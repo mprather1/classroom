@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
 
+  before_action :find_classroom
+  
   def index
-    @users = User.all
+  #  @users = User.all
   end
 
   def show
@@ -49,7 +51,15 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :username, :password, :password_confirmation, :admin)
+    params.require(:user).permit(:first_name, :last_name, :username, :password, :password_confirmation, :admin, :classroom_id)
+  end
+
+  def find_classroom
+    if params[:user_id]
+      @users = User.where(classroom_id: params[:classroom_id])
+    else
+      @users = User.all
+    end
   end
 
 end
