@@ -7,6 +7,7 @@ class ClassroomsController < ApplicationController
 
   def show
     @classroom = Classroom.find(params[:id])
+    @user = User.find(current_user.id)
   end
 
   def new
@@ -53,4 +54,6 @@ class ClassroomsController < ApplicationController
     params.require(:classroom).permit(:title)
   end
 
-  end
+
+
+end
